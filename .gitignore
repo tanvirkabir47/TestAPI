@@ -1,0 +1,25 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.py[cod]
+
+# Python cache
+*.pyc
+
+# Virtual environment
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+
+
+# Static files (collected by collectstatic)
+/staticfiles/
+
+# Secret keys
+.env
+
+# macOS specific files
+.DS_Store
