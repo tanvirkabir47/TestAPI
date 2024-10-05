@@ -23,7 +23,19 @@ class TodoCreateView(generics.ListCreateAPIView):
         return queryset
     
 
-class TodoDetailView(generics.RetrieveUpdateDestroyAPIView):
+class TodoView(generics.RetrieveAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
+    permission_classes = [] # I don't have authentication system
+    
+    
+class TodoUpdateView(generics.UpdateAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
+    permission_classes = [] # I don't have authentication system
+    
+    
+class TodoDeleteView(generics.DestroyAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
     permission_classes = [] # I don't have authentication system
